@@ -4,14 +4,10 @@
   width: 75%;
   top: 100px;
   text-align: center;
-  border: 1px solid black;
 }
 .scoreBoard {
   display: flex;
-  justify-content: flex-end;
-}
-.scoreBoard h5 {
-  padding: 5px;
+  justify-content: space-around;
 }
 
 .flex-box-container-1 {

@@ -1,5 +1,8 @@
 // challenge 1:your age in days
 let gameCounts=1;
+let yourScore=0;
+let compScore=0;
+// alert("Start Game")
 
 function ageInDays(){
   let birthYear=prompt("Enter Your Birth Year:");
@@ -41,8 +44,13 @@ function h3create(name,choice,eleid)
 
 function game(){
   if(gameCounts==11){
-    alert("Game Limit Reached!");
+    
     gameCounts=0;
+    score(-99,0,);
+    reset('gameresult');
+    reset("choicetext");
+    reset("choicetext");
+
   }
 
   document.getElementById("game_val").innerHTML=gameCounts;
@@ -52,13 +60,34 @@ function game(){
 function results(c,u){
   let option;
   if(c==0 && u==0){option=0;}
-  if(c==1 && u==0){option=1}
-  if(c==0 && u==1){option=2}
-  if(c==1 && u==1){option=3}
+  if(c==1 && u==0){option=1;score(0,100)}
+  if(c==0 && u==1){option=2;score(100,0)}
+  if(c==1 && u==1){option=3;score(50,50)}
 
 
 
 
   resultslist=["Both Choose Steal! You Are Greedy","You Win","You Loose","Both Choose Deal,  Jackpot is Split"];
   document.getElementById("gameresult").innerHTML=resultslist[option];
+}
+
+function score(c,y){
+  if(c!=-99){
+    
+    yourScore+=y;
+    compScore+=c;
+  }
+  else{
+    if(yourScore>compScore){
+      alert("Game Limit Reached! User Wins with  "+yourScore);
+    }
+    else{alert("Game Limit Reached! Computer Wins with  "+compScore
+    );}
+    yourScore=0;
+    compScore=0;
+  }  
+  
+  document.getElementById("your_score_val").innerHTML=yourScore;document.getElementById("score_val").innerHTML=compScore;
+
+
 }
