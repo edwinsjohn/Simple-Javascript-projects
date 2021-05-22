@@ -1,8 +1,17 @@
 .container-1 {
-  padding-top: 20%;
   margin: 0 auto;
+  margin-top: 40px;
   width: 75%;
+  top: 100px;
   text-align: center;
+  border: 1px solid black;
+}
+.scoreBoard {
+  display: flex;
+  justify-content: flex-end;
+}
+.scoreBoard h5 {
+  padding: 5px;
 }
 
 .flex-box-container-1 {
@@ -11,6 +20,24 @@
   padding: 10px;
   margin: 0 auto;
   justify-content: space-around;
+}
+.flex-box-container-choice {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin: 0 auto;
+  justify-content: space-around;
+  flex-direction: column;
+}
+h2 {
+  padding-right: 7px;
+}
+.flex-box-container-2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10%;
+  margin: 0 auto;
+  justify-content: center;
 }
 .flex-box-container-1 div {
   padding: 10px;
